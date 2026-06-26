@@ -10,7 +10,52 @@
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](requirements.txt)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)]()
 
+**English** · [中文](README.zh-CN.md)
+
 ---
+
+## Usage
+
+```bash
+# Interactive mode — browse with the keyboard
+mdbrowser
+
+# Command-line mode — fetch a URL, print it, exit (scriptable / pipeable)
+mdbrowser https://en.wikipedia.org/wiki/Markdown
+mdbrowser --reader  https://some-blog/post     # just the article body
+mdbrowser --summary https://some-blog/post     # article + AI summary
+mdbrowser <url> | less                          # auto command-line mode when piped
+mdbrowser --help
+```
+
+### Interactive keys
+
+| Key | Action | Key | Action |
+|-----|--------|-----|--------|
+| paste a URL + `↵` | open it | `<number>` | follow link `⟦n⟧` (also clickable) |
+| `↑` / `↓` | back / forward through history | `↵` | open the highlighted page |
+| `r` | reload | `Shift+Tab` | cycle mode: browse → reader → summary |
+| `s` | save to vault | `set` | settings (`set language Chinese`) |
+| `/clear-history` | wipe history | `h` / `q` | help / quit |
+
+The bottom toolbar always shows the current mode and the key hints. `Shift+Tab`
+flips the mode instantly; press `r` (or `↵`) to apply it to the current page.
+
+## Install
+
+Requires Python 3.10+.
+
+```bash
+git clone https://github.com/kinthaiofficial/mdbrowser.git
+cd mdbrowser
+./install.sh        # creates .venv, installs deps, downloads Chromium
+```
+
+Put it on your PATH (optional):
+
+```bash
+sudo ln -sf "$(pwd)/mdbrowser" /usr/local/bin/mdbrowser
+```
 
 ## What it does
 
@@ -43,49 +88,6 @@ URL ──┤            │ empty / loading? ↓ auto-fallback
   pages.
 - **Persistent history**, **bilingual UI** (English / Chinese), and both an
   **interactive** and a **command-line** mode.
-
-## Install
-
-Requires Python 3.10+.
-
-```bash
-git clone https://github.com/kinthaiofficial/mdbrowser.git
-cd mdbrowser
-./install.sh        # creates .venv, installs deps, downloads Chromium
-```
-
-Put it on your PATH (optional):
-
-```bash
-sudo ln -sf "$(pwd)/mdbrowser" /usr/local/bin/mdbrowser
-```
-
-## Usage
-
-```bash
-# Interactive mode — browse with the keyboard
-mdbrowser
-
-# Command-line mode — fetch a URL, print it, exit (scriptable / pipeable)
-mdbrowser https://en.wikipedia.org/wiki/Markdown
-mdbrowser --reader  https://some-blog/post     # just the article body
-mdbrowser --summary https://some-blog/post     # article + AI summary
-mdbrowser <url> | less                          # auto command-line mode when piped
-mdbrowser --help
-```
-
-### Interactive keys
-
-| Key | Action | Key | Action |
-|-----|--------|-----|--------|
-| paste a URL + `↵` | open it | `<number>` | follow link `⟦n⟧` (also clickable) |
-| `↑` / `↓` | back / forward through history | `↵` | open the highlighted page |
-| `r` | reload | `Shift+Tab` | cycle mode: browse → reader → summary |
-| `s` | save to vault | `set` | settings (`set language Chinese`) |
-| `/clear-history` | wipe history | `h` / `q` | help / quit |
-
-The bottom toolbar always shows the current mode and the key hints. `Shift+Tab`
-flips the mode instantly; press `r` (or `↵`) to apply it to the current page.
 
 ## AI summary mode
 

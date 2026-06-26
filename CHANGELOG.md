@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] - 2026-06-26
+## [1.0.0] - 2026-06-26
 
 ### Added
 - Initial release — a text-mode web browser for the terminal.
