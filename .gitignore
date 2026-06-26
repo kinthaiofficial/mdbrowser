@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local state / personal data (never commit)
+vault/
+mdbrowser-vault/
+.mdbrowser/
+settings.json
+history

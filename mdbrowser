@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Launcher: run mdbrowser from anywhere (incl. via a symlink on PATH).
+SELF="$(readlink -f "${BASH_SOURCE[0]}")"
+DIR="$(dirname "$SELF")"
+exec "$DIR/.venv/bin/python" "$DIR/mdbrowser.py" "$@"
