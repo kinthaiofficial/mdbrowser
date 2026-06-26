@@ -5,6 +5,7 @@
 > like `w3m`/`lynx`, but Markdown-formatted and AI-friendly. Optional reader and
 > AI-summary modes, and one-key saving to an Obsidian-compatible vault.
 
+[![CI](https://github.com/kinthaiofficial/mdbrowser/actions/workflows/ci.yml/badge.svg)](https://github.com/kinthaiofficial/mdbrowser/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](requirements.txt)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)]()
