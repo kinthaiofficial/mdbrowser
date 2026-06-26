@@ -166,4 +166,5 @@ graph your clippings. Links to pages you've already saved become `[[wikilinks]]`
 
 MIT © 2026 Freddy Chu. See [LICENSE](LICENSE).
 
-Contributor: Freddy Chu <freddychu@gmail.com>
+Contributions are welcome — see the
+[contributors](https://github.com/kinthaiofficial/mdbrowser/graphs/contributors).
